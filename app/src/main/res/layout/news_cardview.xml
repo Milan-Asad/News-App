@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="5dp"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:contentPadding="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/newsHeadline"
+            android:layout_width="379dp"
+            android:layout_height="83dp"
+            android:fontFamily="@font/baloo_bhai"
+            android:gravity="center|top"
+            android:lineSpacingExtra="-10dp"
+            android:text="BREAKING NEWS! TODAY IS GOOD BECAUSE THE WEATHER IS REALLY SUNNY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027" />
+
+        <TextView
+            android:id="@+id/newsDescription"
+            android:layout_width="379dp"
+            android:layout_height="120dp"
+            android:fontFamily="@font/baloo_bhai"
+            android:gravity="center|top"
+            android:lineSpacingExtra="-10dp"
+            android:text="BREAKING NEWS! TODAY IS GOOD BECAUSE THE WEATHER IS REALLY SUNNY"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.93" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
