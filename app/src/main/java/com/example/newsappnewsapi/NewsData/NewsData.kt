@@ -5,10 +5,17 @@ data class NewsData(
     val status: String,
     val totalResults: Int,
 
-    // MINE
+    // ARTICLE
     val author: String,
+    val content: String,
+    val description: String,
     val publishedAt: String,
     val source: Source,
     val title: String,
-    val url: String
+    val url: String,
+    val urlToImage: String,
+
+    //
+    val id: String,
+    val name: String
 )

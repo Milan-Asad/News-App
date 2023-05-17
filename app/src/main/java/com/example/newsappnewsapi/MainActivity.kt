@@ -3,6 +3,7 @@ package com.example.newsappnewsapi
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.newsappnewsapi.NewsData.NewsData
@@ -45,6 +46,8 @@ class MainActivity : AppCompatActivity() {
     private var _binding : ActivityMainBinding? = null
     private val binding get() = _binding!!
 
+
+
     lateinit var MyAdapter: MyAdapter
     lateinit var LinearLayoutManager: LinearLayoutManager
 
@@ -55,6 +58,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         getMyData()
+        Refresh()
 
         LinearLayoutManager = LinearLayoutManager(this)
         binding.newsRecyclerView.layoutManager = LinearLayoutManager
@@ -88,6 +92,13 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext,"Error 404, Refresh or restart the app", Toast.LENGTH_LONG).show()
                 }
             }
+        }
+    }
+
+    private fun Refresh() {
+        val refreshBtn = findViewById<Button>(R.id.refreshBtn)
+        refreshBtn.setOnClickListener {
+            getMyData()
         }
     }
 

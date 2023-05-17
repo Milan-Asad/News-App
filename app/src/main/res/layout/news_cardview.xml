@@ -19,8 +19,8 @@
 
         <TextView
             android:id="@+id/newsHeadline"
-            android:layout_width="379dp"
-            android:layout_height="83dp"
+            android:layout_width="369dp"
+            android:layout_height="82dp"
             android:fontFamily="@font/baloo_bhai"
             android:gravity="center|top"
             android:lineSpacingExtra="-10dp"
@@ -29,22 +29,105 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.027" />
+            app:layout_constraintVertical_bias="0.145" />
 
         <TextView
-            android:id="@+id/newsDescription"
-            android:layout_width="379dp"
-            android:layout_height="120dp"
+            android:id="@+id/newsAuthor"
+            android:layout_width="314dp"
+            android:layout_height="22dp"
             android:fontFamily="@font/baloo_bhai"
-            android:gravity="center|top"
-            android:lineSpacingExtra="-10dp"
-            android:text="BREAKING NEWS! TODAY IS GOOD BECAUSE THE WEATHER IS REALLY SUNNY"
-            android:textSize="10dp"
+            android:foregroundGravity="left"
+            android:gravity="top|left|center_vertical"
+            android:lineSpacingExtra="-8sp"
+            android:text="BBC NEWS"
+            android:textSize="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.93" />
+            app:layout_constraintVertical_bias="0.790" />
+
+        <TextView
+            android:id="@+id/newsSource"
+            android:layout_width="314dp"
+            android:layout_height="22dp"
+            android:fontFamily="@font/baloo_bhai"
+            android:foregroundGravity="left"
+            android:gravity="top|left|center_vertical"
+            android:lineSpacingExtra="-8sp"
+            android:text="GUARDIAN"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.623" />
+
+        <TextView
+            android:id="@+id/newsDate"
+            android:layout_width="144dp"
+            android:layout_height="22dp"
+            android:fontFamily="@font/baloo_bhai"
+            android:gravity="top"
+            android:lineSpacingExtra="-10dp"
+            android:text="2017-12-13"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.955" />
+
+        <ImageView
+            android:id="@+id/authorVectorImage3"
+            android:layout_width="33dp"
+            android:layout_height="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.018"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.796"
+            app:srcCompat="@drawable/person_outline" />
+
+        <ImageView
+            android:id="@+id/sourceVectorImage"
+            android:layout_width="33dp"
+            android:layout_height="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.019"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.625"
+            app:srcCompat="@drawable/source_outline" />
+
+        <ImageView
+            android:id="@+id/authorVectorImage"
+            android:layout_width="33dp"
+            android:layout_height="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.018"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.965"
+            app:srcCompat="@drawable/daate_outline" />
+
+        <ImageView
+            android:id="@+id/newsImage"
+            android:layout_width="153dp"
+            android:layout_height="187dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.984"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.046"
+            tools:srcCompat="@tools:sample/avatars" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
