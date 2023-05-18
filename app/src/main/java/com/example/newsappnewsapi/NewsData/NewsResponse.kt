@@ -1,4 +1,4 @@
-package com.example.newsappnewsapi
+package com.example.newsappnewsapi.NewsData
 
 import com.example.newsappnewsapi.NewsData.NewsData
 

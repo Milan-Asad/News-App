@@ -1,4 +1,4 @@
-package com.example.newsappnewsapi
+package com.example.newsappnewsapi.MainActivity
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,10 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsappnewsapi.NewsData.NewsData
-import com.example.newsappnewsapi.NewsData.Source
 import com.example.newsappnewsapi.databinding.NewsCardviewBinding
-import com.squareup.picasso.Picasso
-import org.w3c.dom.Text
 
 
 class MyAdapter(val context: Context, val NewsData: List<NewsData>) :

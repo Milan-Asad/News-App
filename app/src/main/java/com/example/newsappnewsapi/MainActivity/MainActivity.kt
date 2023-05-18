@@ -1,12 +1,15 @@
-package com.example.newsappnewsapi
+package com.example.newsappnewsapi.MainActivity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.newsappnewsapi.NewsData.NewsData
+import com.example.newsappnewsapi.NewsData.NewsResponse
+import com.example.newsappnewsapi.R
+import com.example.newsappnewsapi.UkNews.UkActivity
 import com.example.newsappnewsapi.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -98,8 +101,10 @@ class MainActivity : AppCompatActivity() {
     private fun Refresh() {
         val refreshBtn = findViewById<Button>(R.id.refreshBtn)
         refreshBtn.setOnClickListener {
-            getMyData()
+            val Intent = Intent(this, UkActivity::class.java)
+            startActivity(Intent)
         }
+
     }
 
 }
