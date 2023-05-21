@@ -20,14 +20,14 @@ class MyAdapter(val context: Context, val NewsData: List<NewsData>) :
         var date: TextView = binding.newsDate
         var author: TextView = binding.newsAuthor
         var image: ImageView = binding.newsImage
-        var source: TextView = binding.newsSource
+        //var source: TextView = binding.newsSource
 
 
         fun bind(newsData: NewsData) {
             headline.text = newsData.title
             date.text = newsData.publishedAt
             author.text = newsData.author
-            source.text = newsData.source.name
+            //source.text = newsData.source.name
 
 
             //Picasso.get().load(newsData.urlToImage).into(image)

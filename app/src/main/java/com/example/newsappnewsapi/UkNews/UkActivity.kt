@@ -1,11 +1,14 @@
 package com.example.newsappnewsapi.UkNews
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.newsappnewsapi.MainActivity.BASE_URL
+import com.example.newsappnewsapi.MainActivity.MainActivity
 import com.example.newsappnewsapi.MainActivity.MyAdapter
 import com.example.newsappnewsapi.MainActivity.NewsapiInterface
 import com.example.newsappnewsapi.MainActivity.UkNewsApiInterface
@@ -44,6 +47,9 @@ class UkActivity : AppCompatActivity() {
         binding.UkNewsRecyclerView.layoutManager = linearLayoutManager
 
         getUkNewsData()
+        Refresh()
+
+
     }
 
     private fun getUkNewsData() {
@@ -76,4 +82,14 @@ class UkActivity : AppCompatActivity() {
             }
         }
     }
+    private fun Refresh() {
+        val refreshBtn = findViewById<Button>(R.id.testbtn)
+        refreshBtn.setOnClickListener {
+            val Intent = Intent(this, MainActivity::class.java)
+            startActivity(Intent)
+        }
+
+    }
+
+
 }

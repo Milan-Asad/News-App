@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.newsappnewsapi.NewsData.NewsResponse
 import com.example.newsappnewsapi.R
@@ -59,6 +60,9 @@ class MainActivity : AppCompatActivity() {
         // VIEWBINDING
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
 
         getMyData()
         Refresh()
