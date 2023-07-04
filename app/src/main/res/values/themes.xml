@@ -7,4 +7,7 @@
     </style>
 
     <style name="Theme.NewsAppNewsAPI" parent="Base.Theme.NewsAppNewsAPI" />
+
+
+
 </resources>

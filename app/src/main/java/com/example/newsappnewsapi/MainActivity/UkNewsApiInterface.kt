@@ -8,7 +8,7 @@ import retrofit2.http.Query
 interface UkNewsApiInterface {
 
     companion object {
-        const val API_KEY = "520d8359e3e043dd85dc0c66af5b7f0d"
+        const val API_KEY = "KEY REMOVED FOR SECURITY REASONS"
     }
 
     @GET("v2/top-headlines")

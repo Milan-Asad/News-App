@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.newsappnewsapi.NewsData.Article
 import com.example.newsappnewsapi.NewsData.NewsResponse
 import com.example.newsappnewsapi.R
 import com.example.newsappnewsapi.UkNews.UkActivity
@@ -20,27 +21,7 @@ import retrofit2.Response
 //import kotlinx.android.synthetic.main.activity_main.newsRecyclerView
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-//import kotlin.coroutines.jvm.internal.CompletedContinuation.context
 
-/*
-NOTES:
-
-FOOD API:
-https://api.spoonacular.com/recipes/716429/information?apiKey=c54ba6b8202141d69cd028ce39a0e087&includeNutrition=true
-
-NEWS:
-
-UK WITH NO IMAGES:
-https://newsapi.org/v2/top-headlines?country=gb&apiKey=520d8359e3e043dd85dc0c66af5b7f0d
-
-US WITH IMAGES *USING RN*:
-https://newsapi.org/v2/top-headlines?country=us&apiKey=520d8359e3e043dd85dc0c66af5b7f0d
-
-https://newsapi.org/docs/endpoints - MAIN WEBSITE
-
-VIEWBINDING FOR RECYCLERVIEW
-https://www.geeksforgeeks.org/how-to-use-view-binding-in-recyclerview-adapter-class-in-android/
- */
 
 const val BASE_URL = "https://newsapi.org/"
 
@@ -107,6 +88,9 @@ class MainActivity : AppCompatActivity() {
         refreshBtn.setOnClickListener {
             val Intent = Intent(this, UkActivity::class.java)
             startActivity(Intent)
+
+            overridePendingTransition(0, 0)
+            android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION
         }
 
     }

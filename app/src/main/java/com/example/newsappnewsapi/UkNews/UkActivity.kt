@@ -4,17 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.newsappnewsapi.MainActivity.BASE_URL
 import com.example.newsappnewsapi.MainActivity.MainActivity
-import com.example.newsappnewsapi.MainActivity.MyAdapter
-import com.example.newsappnewsapi.MainActivity.NewsapiInterface
 import com.example.newsappnewsapi.MainActivity.UkNewsApiInterface
 import com.example.newsappnewsapi.NewsData.NewsResponse
 import com.example.newsappnewsapi.R
-import com.example.newsappnewsapi.databinding.ActivityMainBinding
 import com.example.newsappnewsapi.databinding.ActivityUkNewsBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -83,10 +79,14 @@ class UkActivity : AppCompatActivity() {
         }
     }
     private fun Refresh() {
-        val refreshBtn = findViewById<Button>(R.id.testbtn)
-        refreshBtn.setOnClickListener {
+
+        // USED A ? AS WE LAUNCH MAIN ACTIVITY THEREFORE THE BUTTON ISN'T PRESENT SO IT'S NULL FOR NOW
+        binding.testbtn?.setOnClickListener {
             val Intent = Intent(this, MainActivity::class.java)
             startActivity(Intent)
+
+            overridePendingTransition(0, 0)
+            android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION
         }
 
     }
