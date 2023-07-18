@@ -1,4 +1,4 @@
-# News-App
+# News-App (NewsHive)
 
 A news app created using the NewsApi.org API. I created this app for learning purposes, as well as having a passion for developing Android apps. 
 
